@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/styletripsearch.css" />
+    <script type="text/javaScript" src="tripsearch.js"> </script>
+    <script type="text/javascript" src="logoutjavascript.js"></script> <!-- For log out-->
+
+</head>
+
+
+<style>
+
+    /*this is for the sign in*/
+    .cssload-preloader > .cssload-preloader-box {
+        position: absolute;
+        height: 20px;
+        top: 300px;
+
+        margin-left: 840px;
+        left: 200px;
+        margin-top: -50px;
+        margin-bottom: -10px;
+
+        perspective: 195px;
+        -o-perspective: 195px;
+        -ms-perspective: 195px;
+        -webkit-perspective: 195px;
+        -moz-perspective: 195px;
+    }
+
+    .cssload-preloader .cssload-preloader-box > div {
+        position: relative;
+        width: 30px;
+        height: 30px;
+
+        padding-top: 1px;
+        background:white;
+        float: left;
+        text-align: center;
+        line-height: 29px;
+        font-family: Verdana;
+        font-size: 10px;
+        color:black ;
+    }.cssload-preloader .cssload-preloader-box > div:nth-child(1) {
+         background:white;
+         margin-right: 10px;
+
+         animation: cssload-movement 690ms ease 0ms infinite alternate;
+         -o-animation: cssload-movement 690ms ease 0ms infinite alternate;
+         -ms-animation: cssload-movement 690ms ease 0ms infinite alternate;
+         -webkit-animation: cssload-movement 690ms ease 0ms infinite alternate;
+         -moz-animation: cssload-movement 690ms ease 0ms infinite alternate;
+     }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(2) {
+        background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(3) {
+        background: background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(4) {
+        background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(5) {
+        background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 345ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 345ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 345ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 345ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 345ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(6) {
+        background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(7) {
+        background:white;
+        animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+    }
+
+
+    @keyframes cssload-movement {
+        from {
+            transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px #ddd; /*Text shadow*/
+            background:white;
+        }
+    }
+
+    @-o-keyframes cssload-movement {
+        from {
+            -o-transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            -o-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px palegreen;
+            background:white;
+        }
+    }
+
+    @-ms-keyframes cssload-movement {
+        from {
+            -ms-transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            -ms-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px palegreen;
+            background:white;
+        }
+    }
+
+    @-webkit-keyframes cssload-movement {
+        from {
+            -webkit-transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            -webkit-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px palegreen;
+            background:white;
+        }
+    }
+
+    @-moz-keyframes cssload-movement {
+        from {
+            -moz-transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            -moz-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px palegreen;
+            background:white;
+        }
+    }
+
+</style>
+<script type="text/javascript">
+    //        $(window).load(function(){
+    //
+    //        //$(document).ready(function() {
+    //            $('.flexslider').flexslider({
+    //                animation: "slide",
+    //                animationLoop: false,
+    //                itemWidth: 210,
+    //                itemMargin: 5
+    //            });
+    //        });
+
+</script>
+
+
+
+<body>
+
+<div id="main">
+
+    <div id="header">
+        <div>
+            <div id=""><!-- <img id="imgItuLogo" src="../gallery/carpool.png" height="100" width="250"></div>-->
+                <div class="sp-container">
+                    <h2 class="frame-5"><span>Share</span> <span>On</span> <span>Wheels.<br>
+                    <div class="slogan" >Making commuting simpler, greener!!!</div></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="menubar">
+            <ul id="menu">
+                <li class="current"><a href="index.html"><img class="hoverhomeimg" src="../gallery/homeicon.png" height="44px" width="45px"></a></li>
+                <li class=""><a href="tripDetails.html">Trip Register</a></li>
+                <li class=""><a href="MyProfile.html">My Profile</a></li>
+                <li class=""><a href="AboutUs.html">About Us</a></li>
+
+                <li><a style="margin-left: 450px;background-color: whitesmoke">Hello</a></li>
+                <li> <a style="background-color: whitesmoke"><span id="loggedInGuestName">Guest</span></a></li>
+                <li><a style="margin-left: 00px" onclick="logoutuser()" class="myButtonlogout">Log Out</a></li>
+            </ul>
+            <!-- <div class="loggedinuserhello"> <lable class="">Hello</lable></div>
+              <input class="loggedinusername" type="text" value="Guest!!" id="logInUserNameGuest">-->
+            <!--  <div class="loggedinusername"><lable>Log Out</lable>-->
+            <!--<div class="logoutuser"><a href="#" onclick="logoutuser()" class="myButtonlogout" style="color: white;background: green"> logout</a></div>-->
+        </div>
+    </div>
+
+    <div id="site_content">
+        <div id="content">
+            <h1>
+                <center>
+                    <h3>Search your ride</h3><br>
+                    <span id="NotripsError" class="errordisplay">Sorry! No trips are available</span>
+                    <span id="sourceError" class="errordisplay">Enter source</span>
+                    From&nbsp;&nbsp;&nbsp;
+                    <input style="height:40px;width:300px;" type="text" name="source" id="source" placeholder="Source"  onblur="sourcevalidation(name);">
+                    <br><br>
+                    <span class="errordisplay" id="destinationError">Enter destination</span>
+                    To&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input style="height:40px;width:300px;margin-left: 17px" type="text" name="destination" id="destination" placeholder="Destination"  onblur="destinationvalidation(name);">
+                    <br><br>
+                    <a href="#" class="myButton" onclick="tripsearchvalidation();">Search</a>
+                </center>
+            </h1>
+        </div>
+
+        <div id="contentright" style="visibility: visible">
+        <img style="position: absolute" height="49%"width="37%" src="../gallery/share.jpg">
+
+        </div>
+
+
+    </div>
+
+    <div id="footer">
+        <p style="font-size: 15px">Copyright &copy;ShareOnWheels | <a style="" href="http://itu.edu/">International Technological University</a>  <a href="https://www.facebook.com/"><img title="Like us on Facebook" style="height: 40px;width: 40px;" src="../gallery/fbwhite.png"> </img></a></p>
+    </div>
+</div>
+</body>
+</html>

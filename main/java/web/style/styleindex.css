@@ -1,0 +1,612 @@
+html
+{ height: 100%;}
+
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{
+  font-family:   source-sans-pro, sans-serif;
+  background:darkslategray;
+  color: #555;}
+
+p
+{ padding: 0 0 20px 0;
+  line-height: 1.5em;
+  font-size: 107%;}
+
+img
+{ border: 0;}
+
+h1, h2, h3, h4, h5, h6
+{ font: normal 250%  source-sans-pro, sans-serif;
+  color: #444;
+  margin: 0 0 15px 0;
+  padding: 5px 0 5px 0;}
+
+
+#myprofileh1
+{ font: normal 170% source-sans-pro, sans-serif;
+  color: #F14E23;
+  margin: 0;
+  padding: 0 0 8px 0;}
+
+h2
+{ font: normal 170% source-sans-pro, sans-serif;
+  color: #F14E23;
+  margin: 0;
+  padding: 0 0 8px 0;}
+
+h3
+{ font: normal 130% source-sans-pro, sans-serif;
+  color: #444;
+  margin: 0;
+  padding: 0 0 8px 0;}
+
+/*h3
+{ font-size: 200%;
+  margin: 0 0 9px 0;
+  color: #444;}*/
+
+h4, h5, h6
+{ margin: 0;
+  padding: 0 0 5px 0;
+  font: normal 100% source-sans-pro, sans-serif;
+  color: #F14E23;
+  line-height: 1em;}
+
+h5, h6
+{ font: italic 95% source-sans-pro, sans-serif;
+  color: #888;
+  padding-bottom: 15px;}
+
+h6
+{ color: #362C20;}
+
+a, a:hover
+{ outline: none;
+  text-decoration: none;
+  color: #35BDF5;}
+
+a:hover
+{ text-decoration: underline;}
+
+.left
+{ float: left;
+  width: auto;
+  margin-right: 10px;}
+
+.right
+{ float: right;
+  width: auto;
+  margin-left: 10px;}
+
+.center
+{ display: block;
+  text-align: center;
+  margin: 20px auto;}
+
+ul
+{ margin: 2px 0 22px 17px;}
+
+ul li
+{ list-style-type: circle;
+  margin: 0 0 0 0;
+  padding: 0 0 4px 5px;}
+
+ol
+{ margin: 8px 0 22px 20px;}
+
+ol li
+{ margin: 0 0 11px 0;}
+
+#main, #header, #logo, #menubar, #site_content, #footer
+{ margin-left: auto;
+  margin-right: auto;}
+
+#main
+{ width: 1300px;
+  margin: 20px auto;}
+
+#header
+{ width: 1300px;
+  height: 140px;}
+
+#logo
+{ width: 100px;
+  float: left;
+  height: 300px;
+  background: transparent;
+  padding: 0 0 0px 10px;
+  position: relative;
+}
+/* -webkit-animation: myfirst 5s linear 2s infinite alternate;*/
+
+
+@-webkit-keyframes myfirst {
+  0%   { left:0px; top:0px;}
+  25%  { left:800px; top:0px;}
+  50%  { left:800px; top:0px;}
+  75%  { left:80px; top:0px;}
+  100% { left:800px; top:0px;}
+
+
+
+}
+
+
+@font-face
+
+{
+  font-family: 'Electrolize';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Electrolize'), local('Electrolize-Regular'), url(http://themes.googleusercontent.com/static/fonts/electrolize/v2/DDy9sgU2U7S4xAwH5thnJ4bN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+
+
+.sp-container {
+
+
+  width:1200px;
+  height: 100px;
+  z-index: 0;
+
+}
+
+.sp-container h2 {
+  position: absolute;
+  font-family: 'Electrolize';
+  font-weight: bold;
+  margin-top: 20px;
+  line-height: 100px;
+  height: 80px;
+  margin-top: 5px;
+  margin-left: 100px;
+  font-size: 80px;
+  width: 1200px;
+  text-align: center;
+  color: transparent;
+  -webkit-animation: blurFadeInOut 3s ease-in backwards;
+  -moz-animation: blurFadeInOut 3s ease-in backwards;
+  -ms-animation: blurFadeInOut 3s ease-in backwards;
+  animation: blurFadeInOut 3s ease-in backwards;
+}
+.sp-container h2.frame-5 span {
+  -webkit-animation: blurFadeIn 3s ease-in;
+  -moz-animation: blurFadeIn 1s ease-in ;
+  -ms-animation: blurFadeIn 3s ease-in ;
+  animation: blurFadeIn 3s ease-in ;
+  color: transparent;
+  text-shadow: 0px 0px 1px #fff;
+}
+
+@keyframes blurFadeIn{
+  0%{
+    opacity: 0;
+    text-shadow: 0px 0px 40px #fff;
+    transform: scale(1.3);
+  }
+  50%{
+    opacity: 0.5;
+    text-shadow: 0px 0px 10px #fff;
+    transform: scale(1.1);
+  }
+  100%{
+    opacity: 1;
+    text-shadow: 0px 0px 1px #fff;
+    transform: scale(1);
+  }
+}
+
+/* Standard syntax
+ @-webkit-keyframes myfirst {
+  0%   { left:0px; top:0px;}
+  25%  { left:100px; top:0px;}
+  50%  { left:100px; top:100px;}
+  75%  { left:0px; top:100px;}
+  100% { left:0px; top:0px;}
+}
+
+
+@keyframes myfirst {
+  0%   { left:0px; top:0px;}
+  25%  { left:100px; top:0px;}
+  50%  { left:100px; top:100px;}
+  75%  { left:0px; top:100px;}
+  100% { left:0px; top:0px;}
+}
+
+*/
+
+
+#logo h1
+{ font: normal 500% source-sans-pro, sans-serif;
+  padding: 5px 0 0 17px;
+  color: #111;
+  font-weight: bold;
+  float:left;}
+
+#imgItuLogo {
+  float: left;
+  margin: 0 0 10px 10px;
+}
+
+#logo h1 a
+{ color: #35BDF5;
+  text-decoration: none;}
+
+#logo h1 a:hover
+{ color: #555;
+  text-decoration: none;}
+.slogan
+{ float: right;
+  padding-right: 300px;
+
+  text-align: right;
+  font: 40px 'tangerine', arial;
+
+  color: white;}
+
+.loggedinuserhello
+{
+
+  margin-left: 650px;
+  padding-left: 25px;
+  text-align: center;
+  margin-top: 10px;
+
+  /*font: 50px 'tangerine', arial;*/
+  font: 25px source-sans-pro, sans-serif;
+  color: green;
+
+}
+
+.loggedinusername
+{
+
+
+  margin-right: 180px;
+
+  text-align: center;
+  margin-top: -28px;
+  font: 25px source-sans-pro, sans-serif;
+  color: green;
+  float: right;
+  width: 100px;
+  background: white;
+  border: none;
+
+}
+
+.logoutuser
+{
+  margin-right: 0px;
+  float: right;
+  margin-top: 0px;
+
+}
+
+.myButtonlogout {
+  background-color:transparent;
+  border:0px solid #4cc758;
+  display:inline-block;
+  cursor:pointer;
+  color:#050005;
+  font-family:source-sans-pro, sans-serif;
+  font-size:17px;
+  padding:16px 31px;
+  height: 20px;
+  text-decoration:none;
+
+}
+
+#menubar
+{ height: 25px;
+  width: 1300px;
+  /*  margin: 0px auto -1px auto;*/
+  margin-bottom: 5px;
+  float: left;
+  background: whitesmoke;
+  padding: 0px 0px 20px 0;
+
+  border-color: black;
+
+}
+
+ul#menu
+{ float: left;}
+
+ul#menu li
+{ float: left;
+  padding: 0 0 0px 0px;
+  list-style: none;
+  margin: 1px 0 0 0;
+  background: transparent;}
+
+ul#menu li a
+{
+  font: 20px source-sans-pro, sans-serif;
+  text-decoration: none;
+  color: #444;
+  display: block;
+  float: left;
+  height: 18px;
+  padding: 7px 23px 15px 23px;
+  text-align: center;}
+
+ul#menu li.current a
+{ height: 22px;
+  padding: 6px 23px 12px 23px;
+}
+
+ul#menu li.current a
+{
+  /*background: gray;*/
+
+  border: medium red;
+  border-bottom: 0px;
+  color: black;
+  margin-left: -15px;
+
+}
+
+ul#menu li a:hover
+{ color: black;
+  background: white;
+
+}
+
+.hoverhomeimg
+{
+  border: red;
+}
+
+
+#sidebar_container
+{ float: right;
+  width: 250px;
+  margin: 25px 0;}
+
+.sidebar
+{ float: right;
+  width: 200px;
+  margin: 0 24px 27px 0;
+  background: #FBFBFB;
+  border: 1px solid #eee;
+  padding: 0 15px 15px 15px;}
+
+.sidebar h3, .content h1
+{ padding: 10px 15px;
+  margin: 0 1px;}
+
+.sidebar h1
+{ padding: 5px 0 0 0;}
+
+.paperclip
+{ float: left;
+  position: relative;
+  z-index: 0;
+  vertical-align: middle;
+  margin: -27px 0 -60px -30px;}
+
+
+#site_content
+{ width: 1300px;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 0px 0px 0px 0px;
+  background: whitesmoke; /* you can change the body color here */
+  border: 1px solid #E7E7E7;}
+
+#content
+{
+  float: left;
+  text-align: left;
+  width: 500px;
+  /**/
+
+  padding: 5px 0px 0px 0px;
+  margin-left: 25px;
+  margin-right: 0px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+
+#contentright
+{
+  float:right;
+  text-align: left;
+  width: 260px;
+  /**/
+  padding: 25px 25px 25px 25px;
+  margin-left: 0px;
+  margin-right: 25px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  /*background: white;*/
+
+}
+
+#contentrightforgotpass
+{
+  float:right;
+  text-align: left;
+  width: 260px;
+  /**/
+  padding: 5px 25px 40px 25px;
+  margin-left: 100px;
+  margin-right: -410px;
+  margin-top: 120px;
+  margin-bottom: 15px;
+  background: whitesmoke;
+}
+
+
+#contentrightafterlogin
+{
+  float:right;
+  text-align: left;
+  width: 260px;
+  /**/
+  padding: 5px 25px 40px 25px;
+  margin-left: 100px;
+  margin-right: -310px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background: whitesmoke;
+
+}
+
+#content ul
+{ margin: 2px 0 22px 0px;}
+
+#content ul li
+{ list-style-type: none;
+ /* background: url(bullet.png) no-repeat;*/
+  margin: 0 0 6px 0;
+  padding: 0 0 4px 25px;
+  line-height: 1.5em;}
+
+#footer
+{ clear: both;
+  width: 100%;
+  font: normal 150% source-sans-pro, sans-serif;
+  height: 85px;
+  padding: 20px 0 5px 0;
+  text-align: center;
+  color: white;
+  background: transparent;
+  margin-bottom: 20px;}
+
+#footer p
+{ padding: 0 0 10px 0;}
+
+#footer a, #footer a:hover
+{ color: white;
+  text-decoration: none;}
+
+#footer a:hover
+{ color: #35BDF5;
+  text-decoration: none;
+}
+
+.gallery img
+{ position:absolute;}
+
+.form_settings
+{ margin: 5px 0 0 0;}
+
+.form_settings p
+{ padding: 0 0 10px 0;}
+
+.form_settings span
+{ padding: 5px 0;
+  float: left;
+  width: 170px;
+  text-align: left;}
+
+.form_settings input, .form_settings textarea
+{ width: 252px;
+  font: 100% source-sans-pro, sans-serif;
+  border: 1px solid #eee;
+  padding: 5px 10px;
+  background: #fff;
+  color: #FFF;}
+
+.form_settings .submit
+{ border: 0;
+  width: auto;
+  margin: 0 0 0 200px;
+  cursor: pointer;
+  color: #35BDF5;
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  background: #fff;
+  font: normal 140% source-sans-pro, sans-serif;
+}
+
+.form_settings textarea, .form_settings select
+{ font: 100% source-sans-pro, sans-serif;
+  border: 1px solid #eee;
+  padding: 5px 10px;
+  background: #fff;
+  width: 252px;
+  overflow: auto;}
+
+.form_settings select
+{ width: 274px;}
+
+.form_settings .checkbox
+{ margin: 4px 0;
+  padding: 0;
+  width: 14px;
+  border: 0;
+  background: none;}
+
+.search
+{ color: #666;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 10px 5px;
+  width: 189px;
+  color: #F14E23;}
+
+.subscribe
+{ color: #35BDF5;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  background: #fff;
+  float: right;
+  cursor: pointer;
+  margin: 0;
+  font: normal 140% source-sans-pro, sans-serif;}
+
+table
+{ margin: 10px 0 30px 0;}
+
+table tr th, table tr td
+{ background: #F5F5F5;
+  color: #111;
+  padding: 7px 4px;
+  text-align: left;}
+
+table tr td
+{ background: #ffffff;
+  color: #111;
+  border-top: 1px solid #FFF;}
+
+
+
+.myButton {
+  background-color:darkslategray;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #4cc758;
+  display:inline-block;
+  cursor:pointer;
+  color:white;
+  font-family:source-sans-pro, sans-serif;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+
+}
+.myButton:hover {
+  background-color:transparent;
+  color:#0B610B;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+
+.errordisplay /*this is for error displayed while validation*/
+{
+  display: none;
+  font-size: 15px;
+  color: red;
+}

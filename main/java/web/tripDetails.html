@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Trip Display</title>
+    <meta name="description" content="website description"/>
+    <meta name="keywords" content="website keywords, website keywords"/>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- It loads the javascript from jquery-->
+
+
+    <!-- Load jQuery from Google's CDN  above files are loaded for the datepicker-->
+    <!-- Load jQuery UI CSS  -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+    <!-- Load jQuery UI Main JS  -->
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- Load SCRIPT.JS which will create datepicker for input field  -->
+    <script>
+        $(document).ready(
+                /* This is the function that will get executed after the DOM is fully loaded */
+                function () {
+                    $("#datepicker").datepicker({
+                        changeMonth: true,//this option for allowing user to select month
+                        changeYear: true //this option for allowing user to select from year range
+                    });
+                }
+        );
+    </script>
+    <link rel="stylesheet" type="text/css" href="style/styletripdetails.css"/>
+    <script type="text/javascript" src="logoutjavascript.js"></script>
+    <script src="Tripdetails.js" type="text/javascript"></script>
+
+
+    <script>
+
+
+        /*this is for session acces code
+         * */
+        //        alert(window.sessionStorage.getItem("userId").toString());
+        //
+        //
+        //        alert(sessionStorage.getItem("userName").toString());
+
+
+    </script>
+</head>
+
+<body onload=" loaduserID();">
+<div id="main">
+
+    <div id="header">
+        <div>
+            <div id=""><!-- <img id="imgItuLogo" src="../gallery/carpool.png" height="100" width="250"></div>-->
+                <div class="sp-container">
+                    <h2 class="frame-5"><span>Share</span> <span>On</span> <span>Wheels.<br>
+                    <div class="slogan">Making commuting simpler, greener!!!</div></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div id="menubar">
+            <ul id="menu">
+                <li class="current"><a href="index.html"><img class="hoverhomeimg" src="../gallery/homeicon.png"
+                                                              height="44px" width="45px"></a></li>
+                <li class=""><a href="tripSearch.html">Trip Request</a></li>
+                <li class=""><a href="MyProfile.html">My Profile</a></li>
+                <li class=""><a href="AboutUs.html">About Us</a></li>
+
+                <li><a style="margin-left: 450px;background-color: whitesmoke">Hello</a></li>
+                <li><a style="background-color: whitesmoke"><span id="loggedInGuestName">Guest</span></a></li>
+                <li><a style="margin-left: 00px" onclick="logoutuser()" class="myButtonlogout">Log Out</a></li>
+            </ul>
+            <!-- <div class="loggedinuserhello"> <lable class="">Hello</lable></div>
+              <input class="loggedinusername" type="text" value="Guest!!" id="logInUserNameGuest">-->
+            <!--  <div class="loggedinusername"><lable>Log Out</lable>-->
+            <!--<div class="logoutuser"><a href="#" onclick="logoutuser()" class="myButtonlogout" style="color: white;background: green"> logout</a></div>-->
+        </div>
+    </div>
+
+    <div id="site_content">
+
+        <div id="content">
+            <!-- insert the page content here -->
+
+            <br>
+            <br>
+
+            <div id="tripdetails">
+
+                <table border="0px">
+                    <tr>
+                        <td>
+                            <input type="radio" name="SelectUserRadiobtn" id="IWantRideID" value="IWantRide"
+                                   onclick="showHideVehicleDetails()" checked>&nbsp;I want a Ride
+                        </td>
+                        <td>
+                            <input type="radio" name="SelectUserRadiobtn" id="IHaveCarID" value="IHaveCar"
+                                   onclick="showHideVehicleDetails()">&nbsp;I have a Car, Ride with me
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Select Date:</td>
+                        <td><p><input class="textboxHW" id="datepicker" name="datepicker" value=""
+                                      onblur="selectdate(name)"/></p></td>
+                        <td><span id="datepickerError" class="errordisplay">Please select the date</span></td>
+                        <script type="text/javascript">
+
+                            var today = new Date();
+                            var dd = today.getDate();
+                            var mm = today.getMonth() + 1; //January is 0!
+
+                            var yyyy = today.getFullYear();
+                            if (dd < 10) {
+                                dd = '0' + dd
+                            }
+                            if (mm < 10) {
+                                mm = '0' + mm
+                            }
+                            var today = mm + '/' + dd + '/' + yyyy;
+                            // alert(today);
+                            document.getElementById("datepicker").value = today;
+                        </script>
+                        <td>Select Time:</td>
+                        <td><input class="textboxHW" type="time" name="SelectTimeMytime" id="SelectTimeMytime"
+                                   alue="10:04" onblur="selecttime(name)"/></td>
+                        <td><span id="SelectTimeMytimeError" class="errordisplay">Please select the time</span></td>
+
+                    </tr>
+                    <tr>
+
+                    </tr>
+                    <tr>
+                        <td>Comute from:</td>
+                        <td><input class="textboxHW" type="text" name="CommuteFromPlaceTXT" id="CommuteFromPlaceTXT"
+                                   size="30" onblur="commutefrom(name)"/></td>
+                        <td><span id="CommuteFromPlaceTXTError" class="errordisplay">Please enter commute from</span>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Comute to:</td>
+                        <td><input class="textboxHW" type="text" name="CommuteToPlaceTXT" id="CommuteToPlaceTXT"
+                                   size="30" onblur="commuteto(name)"/></td>
+                        <td><span id="CommuteToPlaceTXTError" class="errordisplay">Please enter commute to</span></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <input type="radio" name="typeOfTrip" id="oneTimeTripID" value="onetime"
+                                   onclick="showHideDays()" checked>&nbsp;One time trip
+                        </td>
+                        <td>
+                            <input type="radio" name="typeOfTrip" id="RoutineTripID" value="Routine"
+                                   onclick="showHideDays()">&nbsp;Routine trip
+                        </td>
+                    </tr>
+
+                </table>
+
+
+                <div id="dvDays" style="display: none">
+
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="sunday" name="days" value="SUNDAY"> Sun
+                                <input type="checkbox" id="monday" name="days" value="MONDAY"> Mon
+                                <input type="checkbox" id="tuesday" name="days" value="TUESDAY"> Tue
+
+                            </td>
+                            <td>
+                                <input type="checkbox" id="wednesday" name="days" value="WEDNESDAY"> Wed
+                                <input type="checkbox" id="thursday" name="days" value="THURSDAY"> Thur
+                                <input type="checkbox" id="friday" name="days" value="FRIDAY"> Fri
+                                <input type="checkbox" id="saturday" name="days" value="SATURDAY"> Sat
+                            </td>
+                            <td><span id="routinedaysError" name="routinedaysError" class="errordisplay">Please select routine day</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div id="dvVehicle" style="display: none">
+                <table>
+
+                    <tr>
+                        <td>Vehicle Model:<input class="textboxHW" type="text" id="VehicleModel" name="VehicleModel"
+                                                 onblur="selectvehiclemodel(name)"/></td>
+                        <td><span id="VehicleModelError" name="VehicleModelError" class="errordisplay">Enter vehicle model</span>
+                        </td>
+                        <td>Vehicle number:<input class="textboxHW" type="text" id="VehicleNumber" name="VehicleNumber"
+                                                  onblur="selectvehiclenumber(name)"/></td>
+                        <td><span id="VehicleNumberError" name="VehicleNumberError" class="errordisplay">Enter vehicle number</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Vehicle Capacity: <input class="textboxHW" type="text" id="VehicleCapacity"
+                                                     name="VehicleCapacity" onblur="selectvehiclecapacity(name)"/></td>
+                        <td><span id="VehicleCapacityError" name="VehicleCapacityError" class="errordisplay">Enter vehicle capacity</span>
+                        </td>
+                        <!--<td>User Preferences: <input class="textboxHW" type="text" id="VehicleMake" name="VehicleMake"-->
+                                                     <!--onblur="selectvehiclemake(name)"/></td>-->
+                        <td><span id="VehicleMakeError" name="VehicleMakeError"
+                                  class="errordisplay">Enter vehicle make</span></td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+            <br><br> <input type="checkbox" name="term&conditions" id="term&conditions" onblur="valdiateTerm(name)">&nbsp;&nbsp;I
+            Agree to <a href="termaandconditions.html" title="Link">Terms of Use</a>
+            <td><span id="term&conditionsError" class="errordisplay">Please accept Terms and Conditions</span></td>
+            <center><a href="#" class="myButton" onclick="checksendtripdata();">Submit</a></center>
+            <br>
+
+        </div>
+    </div>
+    <div id="footer">
+        <p style="font-size: 15px">Copyright &copy;ShareOnWheels | <a style="" href="http://itu.edu/">International
+            Technological University</a> <a href="https://www.facebook.com/"><img title="Like us on Facebook"
+                                                                                  style="height: 40px;width: 40px;"
+                                                                                  src="../gallery/fbwhite.png"> </img>
+        </a></p>
+    </div>
+</div>
+</body>
+</html>

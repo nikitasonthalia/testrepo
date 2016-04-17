@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Register</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="style/styleRegister1.css" />
+    <script type="text/javascript" src="Register1.js"></script>
+    <script src="Register1.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="main">
+
+    <div id="header">
+        <div>
+            <div id=""><!-- <img id="imgItuLogo" src="../gallery/carpool.png" height="100" width="250"></div>-->
+                <div class="sp-container">
+                    <h2 class="frame-5"><span>Sharing</span> <span>On</span> <span>Wheels.<br>
+                    <div class="slogan" >Making commuting simpler, greener!!!</div></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="menubar">
+            <ul id="menu">
+                <li class="current"><a href="index.html"><img class="hoverhomeimg" src="../gallery/homeicon.png" height="44px" width="45px"></a></li>
+                <li class=""><a href="LoginPage.html">Sign In</a></li>
+                <li class=""><a href="AboutUs.html">About Us</a></li>
+                <li><a style="margin-left: 700px">Hello</a></li>
+                <li> <a><span id="loggedInGuestName">Guest</span></a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="site_content">
+        <div id="content" style="margin-left: 300px">
+            <!-- insert the page  content here -->
+
+            <h1 style="margin-left: 250px">Sign Up</h1>
+            <br>
+
+
+            <table>
+
+                <tr>
+                    <td> First Name: </td>
+                    <td><input class="textboxHW" type="text" id="first" name="first" value=""   onblur="validateName(name)" /></td>
+                    <td><span id="firstError" class="errordisplay">You can only use alphabetic characters</span></td>
+                </tr>
+
+
+                <tr>
+                    <td> Last Name: </td>
+                    <td><input class="textboxHW" type="text" id="last" name="last" value="" onblur="validateLname(name)"/></td>
+                    <td><span id="lastError"class="errordisplay">You can only use alphabetic characters></span></td>
+                </tr>
+                <tr>
+                    <td> Gender: </td>
+                    <td><select name="gender" id="gender" onblur="validateGender(name)">
+                        <option id="Iam">I am</option>
+                        <option  id="msex"> MALE </option>
+                        <option id="fsex"> FEMALE </option>
+                    </select></td>
+                    <td><span id="genderError"class="errordisplay">Please select the gender</span></td>
+
+                </tr>
+                <tr>
+                    <td> Cell Number </td>
+                    <td><input class="textboxHW" type="text" id="cellnumber" name="cellnumber" value=""  onblur="validateCellnumber(name)"/></td>
+                    <td><span id="cellnumberError"class="errordisplay">Please enter mobile number</span></td>
+                </tr>
+                <tr>
+                    <td> Student Email Id: </td>
+                    <td><input class="textboxHW" type="text" id="studentemailid" name="studentemailid" value=""  onblur="validateEmail(name)" /></td>
+                    <td><span id="studentemailidError" class="errordisplay">Please enter you student email id</span></td>
+                </tr>
+                <tr>
+                    <td> Password </td>
+                    <td><input class="textboxHW" type="password" id="password1" name="password1" value="" onblur="validatePassword(name)"/></td>
+                    <td><span id="password1Error"class="errordisplay">Please enter password</span></td>
+                </tr>
+                <tr>
+                    <td> Confirm Password </td>
+                    <td><input class="textboxHW" type="password" id="confirmpassword" name="confirmpassword" value=""  onblur="validateconfirmpassword(name)" /></td>
+                    <td><span id="confirmpasswordError" class="errordisplay">Please re-enter same password </span></td>
+                </tr>
+                <tr>
+                    <td> Address Line 1 </td>
+                    <td><input class="textboxHW" type="text" id="addressline1" name="addressline1" value=""  placeholder="Street address, P.O.box,etc." onblur="validateAddressline1(name)"/></td>
+                    <td><span id="addressline1Error" class="errordisplay">Please enter your street address,P.O.Box number </span></td>
+                </tr>
+                <tr>
+                    <td> Address Line 2 </td>
+                    <td><input class="textboxHW" type="text" id="addressline2"name="addressline2" value=""  placeholder="Apartment, building , floor, etc." onblur="validateAddressline2(name)"/></td>
+                    <td><span id="addressline2Error" class="errordisplay">Please enter your apartment number</span></td>
+                </tr>
+                <tr>
+                    <td> City </td>
+                    <td><input class="textboxHW" type="text" id="city" name="city" value="" onblur="validateCity(name)" /></td>
+                    <td><span id="cityError" class="errordisplay">Please enter your City</span></td>
+                </tr>
+                <tr>
+                    <td> State </td>
+                    <td><input class="textboxHW" type="text" id="state" name="state" value=""  onblur="validateState(name)"/></td>
+                    <td><span id="stateError" class="errordisplay">Please enter your State</span></td>
+
+                </tr>
+                <tr>
+                    <td> Zipcode </td>
+                    <td><input class="textboxHW" type="text" id="zipcode" name="zipcode" value=""  placeholder="Zipcode 5 digits" onblur="validateZipcode(name)"/></td>
+                    <td><span id="zipcodeError" class="errordisplay">Please enter your Zipcode</span></td>
+                </tr>
+
+            </table>
+            <input type="checkbox" name="term&conditions" id="term&conditions" onblur="valdiateTerm(name)">&nbsp;&nbsp;I Agree to <a href="termaandconditions.html" title="Link">Terms of Use</a>
+            <td><span id="term&conditionsError" class="errordisplay">Please accept Terms and Conditions</span></td>
+            <br><br>
+            <a href="#" style="margin-left: 290px" class="myButton" onclick="formValidation();">Sign Up</a>
+
+        </div>
+    </div>
+  </div>
+
+    <div id="footer">
+        <p style="font-size: 15px">Copyright &copy;ShareOnWheels | <a style="" href="http://itu.edu/">International Technological University</a>  <a href="https://www.facebook.com/"><img title="Like us on Facebook" style="height: 40px;width: 40px;" src="../gallery/fbwhite.png"> </img></a></p>
+    </div>
+
+</body>
+</html>

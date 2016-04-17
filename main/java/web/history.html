@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE HTML>
+
+
+<html>
+
+<head>
+    <title>Home Page</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/stylehistory.css" />
+    <script type="application/javascript" src="history.js"></script>
+    <script type="application/javascript" src="logoutjavascript.js"></script>
+
+
+    <script>
+
+    </script>
+    <style>
+
+    </style>
+
+</head>
+
+<body onload="">
+<div id="main">
+
+    <div id="header">
+        <div>
+            <div id=""><!-- <img id="imgItuLogo" src="../gallery/carpool.png" height="100" width="250"></div>-->
+                <div class="sp-container">
+                    <h2 class="frame-5"><span>Share</span> <span>On</span> <span>Wheels.<br>
+                    <div class="slogan" >Making commuting simpler, greener!!!</div></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="menubar">
+            <ul id="menu">
+                <li class="current"><a href="index.html"><img class="hoverhomeimg" src="../gallery/homeicon.png" height="44px" width="45px"></a></li>
+                <li class=""><a href="tripSearch.html">Trip Request</a></li>
+                <li class=""><a href="tripDetails.html">Trip Register</a></li>
+
+                <li><a style="margin-left: 510px;background-color: whitesmoke">Hello</a></li>
+                <li> <a style="background-color: whitesmoke"><span id="loggedInGuestName">Guest</span></a></li>
+                <li><a style="margin-left: 00px" onclick="logoutuser()" class="myButtonlogout">Log Out</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="site_content">
+       <center> <h1 class="" style="margin: 35px 0px 0px 0px">Trip History</h1></center>
+        <div id="content">
+
+                <div id="divnooftripshistory">
+                    <input type="button" id="btnnooftripshistory" onclick="alltriphostory()" class="myButton" value="Number of Trips you registered"></h3><br><br>
+                    <div id="divnooftripshistorytext"> </div>
+                </div>
+
+                <div id="divnooftripsasadriver">
+                    <input type="button" id="btndivnooftripsasadriver" onclick="triphistoryasdriver()" class="myButton" value="Trips you have requested as a Driver"><br>
+                  <br> <div id="divnooftripsasadrivertext"></div>
+                </div>
+
+                <div id="divnooftripsasarider">
+
+                        <input type="button"  id="btndivnooftripsasarider" onclick="triphistoryasrider()" class="myButton" value="Trips you have requested as a Rider "></h3><br>
+                    <br><div id="divnooftripsasaridertext"></div>
+                </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <p style="font-size: 15px">Copyright &copy;ShareOnWheels | <a style="" href="http://itu.edu/">International Technological University</a>  <a href="https://www.facebook.com/"><img title="Like us on Facebook" style="height: 40px;width: 40px;" src="../gallery/fbwhite.png"> </img></a></p>
+    </div>
+</div>
+</body>
+</html>

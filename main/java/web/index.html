@@ -1,0 +1,540 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Home Page</title>
+    <meta name="description" content="website description"/>
+    <meta name="keywords" content="website keywords, website keywords"/>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/styleindex.css"/>
+
+    <!-- boot strap carousel-->
+
+
+    <script type="text/javaScript" src="LoginJSONValidation.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script>
+
+    </script>
+    <style>
+        /*Now the styles*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            font-family: arial, verdana, tahoma;
+        }
+
+        /*Time to apply widths for accordian to work
+        Width of image = 640px
+        total images = 5
+        so width of hovered image = 640px
+        width of un-hovered image = 40px - you can set this to anything
+        so total container width = 640 + 40*4 = 800px;
+        default width = 800/5 = 160px;
+        */
+
+        .accordian {
+            width: 971px;
+            height: 461px;
+            overflow: hidden;
+
+            /*Time for some styling*/
+            margin: -30px 0px 0px -30px;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+            -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+            -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+        }
+
+        /*A small hack to prevent flickering on some browsers*/
+        .accordian ul {
+            width: 2000px;
+            /*This will give ample space to the last item to move
+            instead of falling down/flickering during hovers.*/
+        }
+
+        .accordian li {
+            position: relative;
+            display: block;
+            width: 160px;
+            float: left;
+
+            border-left: 1px solid #888;
+
+            box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+
+            /*Transitions to give animation effect*/
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            /*If you hover on the images now you should be able to
+            see the basic accordian*/
+        }
+
+        /*Reduce with of un-hovered elements*/
+        .accordian ul:hover li {
+            width: 40px;
+        }
+
+        /*Lets apply hover effects now*/
+        /*The LI hover style should override the UL hover style*/
+        .accordian ul li:hover {
+            width: 640px;
+        }
+
+        .accordian li img {
+            display: block;
+            width: 880px;
+            height: 460px;
+        }
+
+        /*Image title styles*/
+        .image_title {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 850px;
+
+        }
+
+        .image_title a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+
+    <style>
+        /*Simple reset*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+
+        }
+    </style>
+    <style>
+
+        /*this is for the sign in*/
+        .cssload-preloader > .cssload-preloader-box {
+            position: absolute;
+            height: 20px;
+            top: 300px;
+
+            margin-left: 865px;
+            left: 200px;
+            margin-top: -80px;
+            margin-bottom: -10px;
+
+            perspective: 195px;
+            -o-perspective: 195px;
+            -ms-perspective: 195px;
+            -webkit-perspective: 195px;
+            -moz-perspective: 195px;
+        }
+
+        .cssload-preloader .cssload-preloader-box > div {
+            position: relative;
+            width: 30px;
+            height: 30px;
+
+            padding-top: 1px;
+            background: white;
+            float: left;
+            text-align: center;
+            line-height: 29px;
+            font-family: Verdana;
+            font-size: 10px;
+            color: black;
+        }
+
+        .cssload-preloader .cssload-preloader-box > div:nth-child(1) {
+            background: white;
+            margin-right: 10px;
+
+            animation: cssload-movement 690ms ease 0ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 0ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 0ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 0ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 0ms infinite alternate;
+        }
+
+        .cssload-preloader .cssload-preloader-box > div:nth-child(2) {
+            background: white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        }
+
+        .cssload-preloader .cssload-preloader-box > div:nth-child(3) {
+            background: white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        }
+
+        .cssload-preloader .cssload-preloader-box > div:nth-child(4) {
+            background: white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        }
+
+        .cssload-preloader .cssload-preloader-box > div:nth-child(5) {
+            background: white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 345ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 345ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 345ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 345ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 345ms infinite alternate;
+        }
+
+        .cssload-preloader .cssload-preloader-box > div:nth-child(6) {
+            background: white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        }
+
+        .cssload-preloader .cssload-preloader-box > div:nth-child(7) {
+            background: white;
+            animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        }
+
+        @keyframes cssload-movement {
+            from {
+                transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+            to {
+                transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px #ddd; /*Text shadow*/
+                background: white;
+            }
+        }
+
+        @-o-keyframes cssload-movement {
+            from {
+                -o-transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+            to {
+                -o-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px palegreen;
+                background: white;
+            }
+        }
+
+        @-ms-keyframes cssload-movement {
+            from {
+                -ms-transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+            to {
+                -ms-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px palegreen;
+                background: white;
+            }
+        }
+
+        @-webkit-keyframes cssload-movement {
+            from {
+                -webkit-transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+            to {
+                -webkit-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px palegreen;
+                background: white;
+            }
+        }
+
+        @-moz-keyframes cssload-movement {
+            from {
+                -moz-transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+            to {
+                -moz-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px palegreen;
+                background: white;
+            }
+        }
+
+    </style>
+    <script>
+        window.onload = function () {
+            //canvas init
+            // document.write("Hemant");
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+
+            //canvas dimensions
+            var W = window.innerWidth;
+            var H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+
+            //snowflake particles
+            var mp = 25; //max particles
+            var particles = [];
+            for (var i = 0; i < mp; i++) {
+                particles.push({
+                    x: Math.random() * W, //x-coordinate
+                    y: Math.random() * H, //y-coordinate
+                    r: Math.random() * 4 + 1, //radius
+                    d: Math.random() * mp //density
+                })
+            }
+
+            //Lets draw the flakes
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+
+                ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+                ctx.beginPath();
+                for (var i = 0; i < mp; i++) {
+                    var p = particles[i];
+                    ctx.moveTo(p.x, p.y);
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+                }
+                ctx.fill();
+                update();
+            }
+
+            //Function to move the snowflakes
+            //angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+            var angle = 0;
+
+            function update() {
+                angle += 0.01;
+                for (var i = 0; i < mp; i++) {
+                    var p = particles[i];
+                    //Updating X and Y coordinates
+                    //We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+                    //Every particle has its own density which can be used to make the downward movement different for each flake
+                    //Lets make it more random by adding in the radius
+                    p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
+                    p.x += Math.sin(angle) * 2;
+
+                    //Sending flakes back from the top when it exits
+                    //Lets make it a bit more organic and let flakes enter from the left and right also.
+                    if (p.x > W + 5 || p.x < -5 || p.y > H) {
+                        if (i % 3 > 0) //66.67% of the flakes
+                        {
+                            particles[i] = {x: Math.random() * W, y: -10, r: p.r, d: p.d};
+                        }
+                        else {
+                            //If the flake is exitting from the right
+                            if (Math.sin(angle) > 0) {
+                                //Enter from the left
+                                particles[i] = {x: -5, y: Math.random() * H, r: p.r, d: p.d};
+                            }
+                            else {
+                                //Enter from the right
+                                particles[i] = {x: W + 5, y: Math.random() * H, r: p.r, d: p.d};
+                            }
+                        }
+                    }
+                }
+            }
+
+            //animation loop
+            setInterval(draw, 33);
+        }
+
+    </script>
+</head>
+<body>
+<div>
+    <canvas id="canvas"></canvas>
+    <div style="margin-top: 00px">
+        <div><!--put your content here-->
+
+            <div id="main">
+
+                <div id="header">
+                    <div>
+                        <div id="">
+                            <!-- <img id="imgItuLogo" src="../gallery/carpool.png" height="100" width="250"></div>-->
+                            <div class="sp-container">
+                                <h2 class="frame-5"><span>Share</span> <span>On</span> <span>Wheels.<br>
+                        <div class="slogan">Making commuting simpler, greener!!!</div></span><br>
+                                </h2>
+                            </div>
+                        </div>
+                    </div><br>
+                    <br><br><br>
+                    <div id="menubar">
+                        <ul id="menu">
+                            <li class="current"><a href="index.html"><img class="hoverhomeimg"
+                                                                          src="../gallery/homeicon.png" height="44px"
+                                                                          width="45px"></a></li>
+                            <li class=""><a href="AboutUs.html">About Us</a></li>
+
+                            <li><a style="margin-left: 600px;background-color: whitesmoke">Hello</a></li>
+                            <li><a style="background-color: whitesmoke"><span id="loggedInGuestName">Guest</span></a></li>
+                            <li><a href="" id="loggedInmyprofilehref"><span id="loggedInmyprofile"></span></a></li>
+                            <li><span id="logoutbutton"><a style="margin-left: 00px" onclick="logoutuser()"
+                                                           class="myButtonlogout">Log Out</a></span></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div id="site_content">
+                    <div id="content">
+
+
+                        <!-- <img style="position: relative" src="../gallery/homepage1000x400.gif"  height="350px" width="915px" scrolling="no"> </img>-->
+                        <!-- We will make a simple accordian with hover effects
+    The markup will have a list with images and the titles-->
+                        <div class="accordian">
+                            <ul>
+                                <li>
+                                    <div class="image_title">
+                                        <a href="tripSearch.html">Share Your Ride</a>
+                                    </div>
+                                    <a href="#">
+                                        <img src="../gallery/img1.jpeg"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="image_title">
+                                        <a href="tripDetails.html">Share You Joy</a>
+                                    </div>
+                                    <a href="#">
+                                        <img src="../gallery/img2.jpeg"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="image_title">
+                                        <a href="MyProfile.html">Save Money</a>
+                                    </div>
+                                    <a href="#">
+                                        <img src="../gallery/img3.jpeg"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="image_title">
+                                        <a href="history.html">Happy Ride</a>
+                                    </div>
+                                    <a href="#">
+                                        <img src="../gallery/img4.jpeg"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="image_title">
+                                        <a href="AboutUs.html">Save Energy</a>
+                                    </div>
+                                    <a href="#">
+                                        <img src="../gallery/img5.jpeg">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="contentright" style="visibility: visible">
+                        <center><h3>Sign In</h3></center>
+
+                        <center>
+                            <br>
+                            <span id="loginfailed" name="loginfalied" style="display: none; color: red;">Oooops!!! No such user found</span>
+                            <span id="Username_loginfrmError" style="display: none; color: red;">Enter valid Student email id</span>
+                            <input style="height:40px;width:250px; font-size: 15px" type="text" id="Username_loginfrm"
+                                   name="Username_loginfrm" placeholder="Student Email Id"
+                                   onblur="useridvalidation(name);"><br><br>
+                            <span id="Password_loginfrmError"
+                                  style="display: none; color: red;">Enter valid password</span>
+                            <input style="height:40px;width:250px;font-size: 15px" type="password"
+                                   name="Password_loginfrm" id="Password_loginfrm" placeholder="Password"
+                                   onblur="passwordvalidation(name);"><br/><br>
+                            <a href="#" class="" onclick="forgotpasswordsendvalidation();">Forgot Password?</a><br><br>
+                            <a href="#" class="myButton" style="color: white;background: darkslategray;width: 100px"
+                               onclick="logintextboxValiadation();">Sign In</a><br><br>
+                            <a href="Register1.html" style="color: white;background: darkslategray;width: 100px"
+                               class="myButton" onclick="">New User</a>
+                        </center>
+                    </div>
+
+                    <div id="contentrightafterlogin" style="visibility:hidden">
+                        <center><br><br><br><br>
+                            <a href="#" class="myButton" style="width: 100px"
+                               onclick="wantaride();">I need Ride</a>
+                            <br><br><br><br><br><br>
+                            <a href="#" class="myButton" style="width: 100px"
+                               onclick="ihavecar();">I have car</a>
+                            <br><br><br>
+                            <!--<a href="#" style="color: white;background: green;width: 100px" class="myButton" onclick="newuser()">New User</a><br><br><br>-->
+                        </center>
+                    </div>
+
+                    <div id="contentrightforgotpass" style="visibility:hidden">
+                        <center>
+                            <br>
+                            <span id="forgotpasswordvalueError" style="display: none; color: red;">Enter valid Student email id</span>
+                            <input style="height:40px;width:250px; font-size: 15px" type="text" id="forgotpasswordvalue"
+                                   name="forgotpasswordvalue" placeholder="Student Email Id"
+                                   onblur="forgotpasswordvalidation(name)"><br><br>
+                            <a href="#" id="btnForgotpassword" name="btnForgotpassword" class="myButton"
+                               style="color: white;background: darkslategray;width: 100px"
+                               onclick="forgotpasswordsend();">Send Email</a><br><br>
+
+                        </center>
+                    </div>
+
+                </div>
+
+                <div id="footer">
+                    <p style="font-size: 15px">Copyright &copy;ShareOnWheels | <a style="" href="http://itu.edu/">International
+                        Technological University</a> <a href="https://www.facebook.com/"><img
+                            title="Like us on Facebook" style="height: 40px;width: 40px;"
+                            src="../gallery/fbwhite.png"> </img></a></p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+

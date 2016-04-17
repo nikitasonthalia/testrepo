@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/styletripsearch.css" />
+    <script type="text/javaScript" src="tripsearch.js"> </script>
+    <script type="text/javascript" src="logoutjavascript.js"></script> <!-- For log out-->
+
+</head>
+
+
+<style>
+
+    /*this is for the sign in*/
+    .cssload-preloader > .cssload-preloader-box {
+        position: absolute;
+        height: 20px;
+        top: 300px;
+
+        margin-left: 840px;
+        left: 200px;
+        margin-top: -50px;
+        margin-bottom: -10px;
+
+        perspective: 195px;
+        -o-perspective: 195px;
+        -ms-perspective: 195px;
+        -webkit-perspective: 195px;
+        -moz-perspective: 195px;
+    }
+
+    .cssload-preloader .cssload-preloader-box > div {
+        position: relative;
+        width: 30px;
+        height: 30px;
+
+        padding-top: 1px;
+        background:white;
+        float: left;
+        text-align: center;
+        line-height: 29px;
+        font-family: Verdana;
+        font-size: 10px;
+        color:black ;
+    }.cssload-preloader .cssload-preloader-box > div:nth-child(1) {
+         background:white;
+         margin-right: 10px;
+
+         animation: cssload-movement 690ms ease 0ms infinite alternate;
+         -o-animation: cssload-movement 690ms ease 0ms infinite alternate;
+         -ms-animation: cssload-movement 690ms ease 0ms infinite alternate;
+         -webkit-animation: cssload-movement 690ms ease 0ms infinite alternate;
+         -moz-animation: cssload-movement 690ms ease 0ms infinite alternate;
+     }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(2) {
+        background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(3) {
+        background: background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(4) {
+        background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(5) {
+        background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 345ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 345ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 345ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 345ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 345ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(6) {
+        background:white;
+        margin-right: 10px;
+        animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+    }
+    .cssload-preloader .cssload-preloader-box > div:nth-child(7) {
+        background:white;
+        animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        -o-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        -ms-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        -webkit-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        -moz-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+    }
+
+
+    @keyframes cssload-movement {
+        from {
+            transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px #ddd; /*Text shadow*/
+            background:white;
+        }
+    }
+
+    @-o-keyframes cssload-movement {
+        from {
+            -o-transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            -o-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px palegreen;
+            background:white;
+        }
+    }
+
+    @-ms-keyframes cssload-movement {
+        from {
+            -ms-transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            -ms-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px palegreen;
+            background:white;
+        }
+    }
+
+    @-webkit-keyframes cssload-movement {
+        from {
+            -webkit-transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            -webkit-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px palegreen;
+            background:white;
+        }
+    }
+
+    @-moz-keyframes cssload-movement {
+        from {
+            -moz-transform: scale(1.0) translateY(0px) rotateX(0deg);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        to {
+            -moz-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+            box-shadow: 0 24px 39px palegreen;
+            background:white;
+        }
+    }
+
+</style>
+<script type="text/javascript">
+    //        $(window).load(function(){
+    //
+    //        //$(document).ready(function() {
+    //            $('.flexslider').flexslider({
+    //                animation: "slide",
+    //                animationLoop: false,
+    //                itemWidth: 210,
+    //                itemMargin: 5
+    //            });
+    //        });
+
+</script>
+
+
+
+<body>
+
+<div id="main">
+
+    <div id="header">
+        <div>
+            <div id=""><!-- <img id="imgItuLogo" src="../gallery/carpool.png" height="100" width="250"></div>-->
+                <div class="sp-container">
+                    <h2 class="frame-5"><span>Sharing</span> <span>On</span> <span>Wheels.<br>
+                    <div class="slogan" >Making commuting simpler, greener!!!</div></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="menubar">
+            <ul id="menu">
+                <li class="current"><a href="index.html"><img class="hoverhomeimg" src="../gallery/homeicon.png" height="44px" width="45px"></a></li>
+                <li class=""><a href="tripDetails.html">Trip Register</a></li>
+                <li class=""><a href="MyProfile.html">My Profile</a></li>
+                <li class=""><a href="AboutUs.html">About Us</a></li>
+
+                <li><a style="margin-left: 300px">Hello</a></li>
+                <li> <a><span id="loggedInGuestName">Guest</span></a></li>
+                <li><a style="margin-left: 00px" onclick="logoutuser()" class="myButtonlogout">Log Out</a></li>
+            </ul>
+            <!-- <div class="loggedinuserhello"> <lable class="">Hello</lable></div>
+              <input class="loggedinusername" type="text" value="Guest!!" id="logInUserNameGuest">-->
+            <!--  <div class="loggedinusername"><lable>Log Out</lable>-->
+            <!--<div class="logoutuser"><a href="#" onclick="logoutuser()" class="myButtonlogout" style="color: white;background: green"> logout</a></div>-->
+        </div>
+    </div>
+
+    <div id="site_content">
+        <div id="content">
+          <p>
+              1. I agree that I am a legal student at ITU and the email address I am providing is the correct email address which I am currently using.<br><br>
+              2. I agree that all the personal details I have provided is correct as of present and it is my sole responsibility to update them by myself on the "Sharing on Wheels" website if any changes happen.<br><br>
+              3. I agree that the vehicles details that I might provide will be correct as per DMV motor department. I have legal proof showing that the vehicle I have registered on Sharing on Wheels website is owned by me and have the correct details. It is my sole responsibility to update them by myself on the "Sharing on Wheels" website if any changes happen.<br><br>
+              4. I agree that Sharing on Wheels team is not responsible in any way for any misconduct , misbehavoiur or any incident which might happen while the Driver /Rider is on the trip.<br><br>
+              5. I agree that Sharing on Wheels team is not responsible in any way for any damage to the car/vehicle which might happen while the Driver /Rider is on the trip.<br><br>
+              6. I understand that violation of this agreement maybe considered a a violation of college's student code of conduct and may result in penalties. Violations may also constitute a violation of federal/state laws and may result in civil / criminal prosecution in different ways as suited by the authorities.<br><br>
+
+          </p>
+        </div>
+
+        <div id="contentright" style="visibility: visible">
+
+
+        </div>
+
+
+    </div>
+
+    <div id="footer">
+        <p style="font-size: 15px">Copyright &copy;ShareOnWheels | <a style="" href="http://itu.edu/">International Technological University</a>  <a href="https://www.facebook.com/"><img title="Like us on Facebook" style="height: 40px;width: 40px;" src="../gallery/fbwhite.png"> </img></a></p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+
+
+<!--
+
+$(document).ready(function() {
+    var  obj = JSON.parse(sessionStorage.getItem('loogenInuser'));
+
+    alert(obj.$1);
+
+
+    document.getElementById("first").value=obj.firstName;
+    document.getElementById("last").value=obj.lastName;
+    document.getElementById("cellNumber").value=obj.phoneNumber;
+    document.getElementById("studentEmailID").value=obj.emailAddress;
+    document.getElementById("studentEmailID").value=obj.emailAddress;
+    document.getElementById("addressLine1").value=obj.addressLine1;
+    document.getElementById("addressLine2").value=obj.addressLine2;
+    document.getElementById("city").value=obj.city;
+    document.getElementById("state").value=obj.state;
+    document.getElementById("zipcode").value=obj.zipCode;
+    //document.getElementById("VehicleModel").value=obj.
+//var x=obj.userid;
+
+   // alert(obj);
+-->
+
+<!DOCTYPE HTML>
+
+
+<html>
+
+<head>
+  <title>Home Page</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/stylemyprofile.css" />
+  <script type="application/javascript" src="myProfile.js"></script>
+  <script type="application/javascript" src="logoutjavascript.js"></script>
+
+
+  <script>
+
+  </script>
+<style>
+  #contentrighthistory
+  {
+    float:right;
+    height: auto;
+    width: 300px;
+    /*text-align: left;*/
+    padding: 25px 25px 25px 25px;
+
+    margin-right: 25px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    background: red;
+
+    color:blue;
+    /*font: darkslategray;*/
+
+  }
+</style>
+
+</head>
+
+<body onload="disableText()">
+<div id="main">
+
+  <div id="header">
+    <div>
+      <div id=""><!-- <img id="imgItuLogo" src="../gallery/carpool.png" height="100" width="250"></div>-->
+        <div class="sp-container">
+          <h2 class="frame-5"><span>Share</span> <span>On</span> <span>Wheels.<br>
+                    <div class="slogan" >Making commuting simpler, greener!!!</div></span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="menubar">
+      <ul id="menu">
+        <li class="current"><a href="index.html"><img class="hoverhomeimg" src="../gallery/homeicon.png" height="44px" width="45px"></a></li>
+        <li class=""><a href="tripSearch.html">Trip Request</a></li>
+        <li class=""><a href="tripDetails.html">Trip Register</a></li>
+        <li><a href="history.html">Trip History</a></li>
+
+        <li><a style="margin-left: 400px;background-color: whitesmoke">Hello</a></li>
+        <li> <a style="background-color: whitesmoke"><span id="loggedInGuestName">Guest</span></a></li>
+
+
+        <li><a style="margin-left: 00px" onclick="logoutuser()" class="myButtonlogout">Log Out</a></li>
+      </ul>
+      <!-- <div class="loggedinuserhello"> <lable class="">Hello</lable></div>
+        <input class="loggedinusername" type="text" value="Guest!!" id="logInUserNameGuest">-->
+      <!--  <div class="loggedinusername"><lable>Log Out</lable>-->
+      <!--<div class="logoutuser"><a href="#" onclick="logoutuser()" class="myButtonlogout" style="color: white;background: green"> logout</a></div>-->
+    </div>
+  </div>
+
+  <div id="site_content">
+
+    <div id="content">
+
+      <center>
+        <h1 class="">My Profile<br></h1>
+          <span id="Datasavedsuccess" class="errordisplay" style="color: darkgreen">Data Saved Successfull!</span></h2>
+
+
+          <table>
+            <tr>
+              <td>First Name</td>
+              <td><input class="textboxHW" type="text" name="first" id="first" value=""  onblur="validateFirstName(name)" /></td>
+              <td><span id="firstError" class="errordisplay">Enter valid first Name</span></td>
+            </tr>
+            <tr>
+              <td> Last Name</td>
+              <td><input class="textboxHW" type="text" name="last" id= "last" value="" onblur="validateLastname(name)" /></td>
+              <td><span id="lastError"class="errordisplay">Enter valid first Name</span></td></tr>
+            <tr>
+              <td>  Cell Number</td>
+              <td><input class="textboxHW" type="text" name="cellnumber" id="cellnumber" value="" onblur="validateCellnumber(name)" /></td>
+              <td><span id="cellnumberError"class="errordisplay">Enter Valid Phone Number</span></td>
+            </tr>
+            <tr>
+              <td> Student Email Id </td>
+              <td><input class="textboxHW" type="text" id="studentEmailId"  name="studentEmailId" value=""  onblur="validateEmail(name)"/></td>
+              <td><span id="studentEmailIdError" class="errordisplay">Please enter you student email id</span></td></tr>
+            <tr>
+              <td>  Password </td>
+              <td><input class="textboxHW" type="text" id="password" name="password" value="" onblur="" /></td>
+              <td><span id="passwordError"class="errordisplay">Please enter password</span></td>
+            </tr>
+            <tr>
+              <td>  Address Line 1 </td>
+              <td><input class="textboxHW" type="text" id="addressLine1" name="addressLine1" value="" onblur="validateAddressline1(name)" /></td>
+              <td><span id="addressLine1Error" class="errordisplay">Please enter your street address,P.O.Box number </span></td>
+            </tr>
+            <tr>
+              <td>  Address Line 2 </td>
+              <td><input class="textboxHW" type="text" id="addressLine2" name="addressLine2" value=""  onblur="validateAddressline2(name)" /></td>
+              <td><span id="addressLine2Error" class="errordisplay">Please enter your apartment number</span></td></tr>
+            <tr>
+              <td> City </td>
+              <td><input class="textboxHW" type="text" id="city" name="addressLine2" value="" onblur="validateCity(name)"/></td>
+              <td><span id="cityError" class="errordisplay">Please enter your City</span></td>
+            </tr>
+            <tr>
+              <td>  State </td>
+              <td><input class="textboxHW" type="text" id="state" name="state" value=""  onblur="validateState(name)" /></td>
+              <td><span id="stateError" class="errordisplay">Please enter your State</span></td>
+            </tr>
+            <tr>
+              <td>  Zipcode</td>
+              <td><input class="textboxHW" type="text" id="zipcode" name="zipcode" value="" onblur="validateZipcode(name)" /></td>
+              <td><span id="zipcodeError" class="errordisplay">Please enter your Zipcode</span></td>
+            </tr>
+
+            <tr>
+              <td> Vehicle Model:</td>
+              <td> <input class="textboxHW" type="text" value="" id="VehicleModel" name="VehicleModel"></td>
+              <td><span id="VehicleModelError" class="errordisplay">Please enter vehicle model</span></td>
+
+            </tr>
+
+            <tr>
+              <td> Vehicle Number :</td>
+              <td> <input class="textboxHW" type="text" id="VehicleNumber"  value="" name="VehicleNumber" ></td>
+              <td><span id="VehicleNumberError" class="errordisplay">Please enter vehicle number</span></td>
+
+            </tr>
+            <tr>
+              <td> Vehicle Capacity:</td>
+              <td> <input class="textboxHW" type="text" id="vehicleCapacity" name="vehicleCapacity" ></td>
+              <td><span id="vehicleCapacityError" class="errordisplay">Please enter vehicle capacity</span></td>
+
+            </tr>
+
+            <tr>
+              <td> User preference:</td>
+              <td> <input class="textboxHW" type="text" id="riderPreference"></td>
+              <td><span id="riderPreferenceError" class="errordisplay">Please enter your Zipcode</span></td>
+
+            </tr>
+            <tr>
+            <td><input type="checkbox" name="term&conditions" id="term&conditions" onblur="valdiateTerm(name)">&nbsp;&nbsp;I Agree to <a href="termaandconditions.html" title="Link">Terms of Use</a></td>
+            <td><span id="term&conditionsError" class="errordisplay">Please accept Terms and Conditions</span></td>
+            </tr>
+          </table>
+        <a href="#" class="myButton" onclick="enableText()">Edit Profile</a>&nbsp;
+        <a href="#" class="myButton" onclick="savedata()"> Save Changes</a>
+      </center>
+    </div>
+
+
+
+  </div>
+  <div id="footer">
+    <p style="font-size: 15px">Copyright &copy;ShareOnWheels | <a style="" href="http://itu.edu/">International Technological University</a>  <a href="https://www.facebook.com/"><img title="Like us on Facebook" style="height: 40px;width: 40px;" src="../gallery/fbwhite.png"> </img></a></p>
+  </div>
+</div>
+</body>
+</html>

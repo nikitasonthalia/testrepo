@@ -1,0 +1,316 @@
+<!--
+Designed by Hemant Choudhari
+Login page.html
+javascript is LoginJSONValidation.js
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home Page</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/styleLogin.css" />
+    <script type="text/javaScript" src="LoginJSONValidation.js"> </script>
+
+
+    <style>
+
+
+        @font-face
+
+        {
+            font-family: 'Electrolize';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Electrolize'), local('Electrolize-Regular'), url(http://themes.googleusercontent.com/static/fonts/electrolize/v2/DDy9sgU2U7S4xAwH5thnJ4bN6UDyHWBl620a-IRfuBk.woff) format('woff');
+        }
+
+
+        .sp-container {
+
+
+            width:1200px;
+            height: 150px;
+            z-index: 0;
+
+        }
+
+        .sp-container h2 {
+            position: absolute;
+            font-family: 'Electrolize';
+            font-weight: bold;
+            margin-top: 20px;
+            line-height: 100px;
+            height: 90px;
+            margin-top: 5px;
+            margin-left: 100px;
+            font-size: 90px;
+            width: 1200px;
+            text-align: center;
+            color: transparent;
+            -webkit-animation: blurFadeInOut 3s ease-in backwards;
+            -moz-animation: blurFadeInOut 3s ease-in backwards;
+            -ms-animation: blurFadeInOut 3s ease-in backwards;
+            animation: blurFadeInOut 3s ease-in backwards;
+        }
+        .sp-container h2.frame-5 span {
+            -webkit-animation: blurFadeIn 3s ease-in;
+            -moz-animation: blurFadeIn 1s ease-in ;
+            -ms-animation: blurFadeIn 3s ease-in ;
+            animation: blurFadeIn 3s ease-in ;
+            color: transparent;
+            text-shadow: 0px 0px 1px #fff;
+        }
+
+        @keyframes blurFadeIn{
+            0%{
+                opacity: 0;
+                text-shadow: 0px 0px 40px #fff;
+                transform: scale(1.3);
+            }
+            50%{
+                opacity: 0.5;
+                text-shadow: 0px 0px 10px #fff;
+                transform: scale(1.1);
+            }
+            100%{
+                opacity: 1;
+                text-shadow: 0px 0px 1px #fff;
+                transform: scale(1);
+            }
+        }
+    </style>
+    <style>
+
+        /*this is for the sign in*/
+        .cssload-preloader > .cssload-preloader-box {
+            position: fixed;
+            height: 20px;
+            top: 300px;
+
+
+            left: 580px;
+            align-content: center;
+
+            perspective: 195px;
+            -o-perspective: 195px;
+            -ms-perspective: 195px;
+            -webkit-perspective: 195px;
+            -moz-perspective: 195px;
+        }
+
+        .cssload-preloader .cssload-preloader-box > div {
+            position: relative;
+            width: 40px;
+            height: 40px;
+
+            padding-top: 1px;
+            background:white;
+            float: left;
+            text-align: center;
+            line-height: 29px;
+            font-family: Verdana;
+            font-size: 20px;
+            color:black ;
+        }.cssload-preloader .cssload-preloader-box > div:nth-child(1) {
+             background:white;
+             margin-right: 10px;
+
+             animation: cssload-movement 690ms ease 0ms infinite alternate;
+             -o-animation: cssload-movement 690ms ease 0ms infinite alternate;
+             -ms-animation: cssload-movement 690ms ease 0ms infinite alternate;
+             -webkit-animation: cssload-movement 690ms ease 0ms infinite alternate;
+             -moz-animation: cssload-movement 690ms ease 0ms infinite alternate;
+         }
+        .cssload-preloader .cssload-preloader-box > div:nth-child(2) {
+            background:white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
+        }
+        .cssload-preloader .cssload-preloader-box > div:nth-child(3) {
+            background: background:white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
+        }
+        .cssload-preloader .cssload-preloader-box > div:nth-child(4) {
+            background:white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
+        }
+        .cssload-preloader .cssload-preloader-box > div:nth-child(5) {
+            background:white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 345ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 345ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 345ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 345ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 345ms infinite alternate;
+        }
+        .cssload-preloader .cssload-preloader-box > div:nth-child(6) {
+            background:white;
+            margin-right: 10px;
+            animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
+        }
+        .cssload-preloader .cssload-preloader-box > div:nth-child(7) {
+            background:white;
+            animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+            -o-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+            -ms-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+            -webkit-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+            -moz-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
+        }
+
+
+        @keyframes cssload-movement {
+            from {
+                transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0,0,0,0);
+            }
+            to {
+                transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px #ddd; /*Text shadow*/
+                background:white;
+            }
+        }
+
+        @-o-keyframes cssload-movement {
+            from {
+                -o-transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0,0,0,0);
+            }
+            to {
+                -o-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px palegreen;
+                background:white;
+            }
+        }
+
+        @-ms-keyframes cssload-movement {
+            from {
+                -ms-transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0,0,0,0);
+            }
+            to {
+                -ms-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px palegreen;
+                background:white;
+            }
+        }
+
+        @-webkit-keyframes cssload-movement {
+            from {
+                -webkit-transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0,0,0,0);
+            }
+            to {
+                -webkit-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px palegreen;
+                background:white;
+            }
+        }
+
+        @-moz-keyframes cssload-movement {
+            from {
+                -moz-transform: scale(1.0) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0,0,0,0);
+            }
+            to {
+                -moz-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+                box-shadow: 0 24px 39px palegreen;
+                background:white;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div id="main" style=" background:fixed">
+    <div id="header">
+        <div>
+            <div id=""><!-- <img id="imgItuLogo" src="../gallery/carpool.png" height="100" width="250"></div>-->
+                <div class="sp-container">
+                    <h2 class="frame-5"><span>Sharing</span> <span>On</span> <span>Wheels.<br>
+                    <div class="slogan" >Making commuting simpler, greener!!!</div></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="menubar">
+            <ul id="menu">
+                <li class="current"><a href="index.html"><img class="hoverhomeimg" src="../gallery/homeicon.png" height="44px" width="45px"></a></li>
+
+
+                <li><a style="margin-left: 400px">Hello</a></li>
+                <li> <a><span id="loggedInGuestName">Guest</span></a></li>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+    <div id="site_content">
+        <div id="content">
+            <center>
+                <h2>
+                    <center>
+                        <!--<h1>Sign In</h1>-->
+                        <br>
+                        <div class="cssload-preloader">
+                            <div class="cssload-preloader-box">
+                                <br>
+                                <div>S</div>&nbsp;&nbsp;
+                                <div>I</div>&nbsp;&nbsp;
+                                <div>G</div>&nbsp;&nbsp;
+                                <div>N</div>&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                <div>I</div>&nbsp;&nbsp;
+                                <div>N</div>&nbsp;&nbsp;
+
+
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <br>
+                        <span id="loginfailed" name="loginfalied" style="display: none; color: red;">Oooops!!! No such user found</span>
+                        <span id="Username_loginfrmError" style="display: none; color: red;">Please enter the valid Student email id</span>
+                        <input style="height:40px;width:300px;" type="text" id="Username_loginfrm" name = "Username_loginfrm" placeholder="Student Email Id" onblur="useridvalidation(name);"><br><br>
+                        <span id="Password_loginfrmError" style="display: none; color: red;">Please enter the valid password</span>
+                        <input style="height:40px;width:300px;" type="password" name="Password_loginfrm" id="Password_loginfrm" placeholder="Password"  onblur="passwordvalidation(name);"><br /><br>
+
+                        <!--<a href="#" class="myButton" onclick="Logincheck();">Sign In</a>-->
+                        <a href="#" class="myButton" onclick="logintextboxValiadation();">Sign In</a>
+                    </center>
+                </h2>
+            </center>
+        </div>
+    </div>
+
+<div id="footer">
+    <p style="font-size: 15px">Copyright &copy;ShareOnWheels | <a style="" href="http://itu.edu/">International Technological University</a>  <a href="https://www.facebook.com/"><img title="Like us on Facebook" style="height: 40px;width: 40px;" src="../gallery/fbwhite.png"> </img></a></p>
+</div>
+
+</div>
+</body>
+</html>
